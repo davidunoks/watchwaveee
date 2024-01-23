@@ -198,11 +198,12 @@ insertMovies();
 // Middleware setup
 app.use(cors()); // Enable CORS
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname +'/index.html');
 });
 
 app.get('/recommend', async (req, res) => {
