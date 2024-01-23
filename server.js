@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path')
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://davidunoks:1234@cluster0.ob21fjr.mongodb.net/?retryWrites=true&w=majority', {
